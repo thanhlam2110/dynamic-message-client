@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+option go_package = "grpc-client/proto";        // gen cmd `protoc -I=./grpc-client --go_out=plugins=grpc:./ proto/data.proto`
+package proto;
+
+import "google/protobuf/any.proto";
+
+// Data Interface
+service DataService {
+    rpc PutData(PutDataRequest) returns (PutDataRespose){}
+    rpc PutDataStream(stream PutDataStreamRequest) returns (PutDataStreamRespose){}
+    rpc GetData(GetDataRequest) returns (stream GetDataRespose){}
+    rpc GetDataStream(stream GetDataStreamRequest) returns (stream GetDataStreamRespose){}
+}
+
+message PutDataRequest {
+    string type = 1;
+    google.protobuf.Any data = 2;
+}
+message PutDataRespose {
+    int32 err = 1;
+    string desc = 2;
+}
+
+message PutDataStreamRequest {
+    string type = 1;
+    google.protobuf.Any data = 2;
+}
+message PutDataStreamRespose {
+    int32 err = 1;
+    string desc = 2;
+}
+
+message GetDataRequest {
+    string type = 1;
+    google.protobuf.Any data = 2;
+}
+message GetDataRespose {
+    int32 err = 1;
+    string desc = 2;
+    string type = 3;
+    google.protobuf.Any data = 4;
+}
+
+message GetDataStreamRequest {
+    string type = 1;
+    google.protobuf.Any data = 2;
+}
+message GetDataStreamRespose {
+    int32 err = 1;
+    string desc = 2;
+    string type = 3;
+    google.protobuf.Any data = 4;
+}
