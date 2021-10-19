@@ -14,3 +14,14 @@ root@ubuntu:~# sudo tar -xvf go1.15.6.linux-amd64.tar.gz
 root@ubuntu:~# sudo mv go /usr/local
 ~~~
 ### Config
+~~~
+root@ubuntu:~# mkdir admin
+root@ubuntu:~# cd admin/
+root@ubuntu:~/admin# mkdir go
+root@ubuntu:/# nano ~/.profile
+ADD at End of file
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/admin/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+root@ubuntu:/# source ~/.profile
+~~~
