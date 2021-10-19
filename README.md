@@ -19,9 +19,15 @@ root@ubuntu:~# mkdir admin
 root@ubuntu:~# cd admin/
 root@ubuntu:~/admin# mkdir go
 root@ubuntu:/# nano ~/.profile
-ADD at End of file
+~~~
+ADD at End of file ~/.profile
+~~~
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/admin/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 root@ubuntu:/# source ~/.profile
+~~~
+Check version
+~~~
+root@ubuntu:/# go version
 ~~~
