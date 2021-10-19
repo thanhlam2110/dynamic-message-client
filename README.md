@@ -31,7 +31,7 @@ Check version
 ~~~
 root@ubuntu:/# go version
 ~~~
-### Test
+## Run code
 ~~~
 root@master:~# cd admin/go/
 root@master:~/admin/go# mkdir src
