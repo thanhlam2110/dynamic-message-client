@@ -31,3 +31,32 @@ Check version
 ~~~
 root@ubuntu:/# go version
 ~~~
+### Test
+~~~
+root@master:~# cd admin/go/
+root@master:~/admin/go# mkdir src
+root@master:~/admin/go# cd src/
+root@master:~/admin/go/src# mkdir github.com
+root@master:~/admin/go/src# cd github.com/
+root@master:~/admin/go/src/github.com# mkdir thanhlam
+root@master:~/admin/go/src/github.com# cd thanhlam/
+root@master:~/admin/go/src/github.com/thanhlam#
+root@ubuntu:~/admin/go/src/bitbucket.org/cloud-platform/test# nano main.go
+~~~
+ADD
+~~~
+package main
+import "fmt"
+func main() {
+        fmt.Println("hello")
+        tong := Sum(10)
+        fmt.Println(tong)
+}
+func Sum(number int) int {
+        sum := 0
+        for i := 0; i < number; i++ {
+                sum += i
+        }
+        return sum
+}
+~~~
