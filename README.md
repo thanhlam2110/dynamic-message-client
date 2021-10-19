@@ -7,4 +7,5 @@ gRPC Dynamic Message client
 ## Install Go version 15
 ~~~
 sudo apt-get update
+apt-get upgrade
 ~~~
